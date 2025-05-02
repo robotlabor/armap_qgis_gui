@@ -311,10 +311,10 @@ class MainWindow(QMainWindow):
 
 		
 	def initLayers(self):
-		filename = "/home/ubuntu/armap/armap_qgis/imagedata/zalazone_ortofoto_20220825.tif"
-		filename = "/home/ubuntu/armap/armap_qgis/imagedata/zalazone_Egyetemi-palya_orthophoto.tif"
-		filename = "/home/ubuntu/armap/armap_qgis/imagedata/smartcity_ortofoto_20220825.tif"
-		filename2 = "/home/ubuntu/armap/armap_qgis/imagedata/73-341_o_2008.tif"
+		filename = "imagedata/zalazone_ortofoto_20220825.tif"
+		filename = "imagedata/zalazone_Egyetemi-palya_orthophoto.tif"
+		filename = "imagedata/smartcity_ortofoto_20220825.tif"
+		filename2 = "imagedata/73-341_o_2008.tif"
 		
 		#qgis.utils.iface.mapCanvas().mapRenderer().setDestinationCrs(QgsCoordinateReferenceSystem('EPSG:4326'))
 		#crs = QgsCoordinateReferenceSystem('EPSG:32633')
