@@ -30,8 +30,6 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
-
 The project goal is to create an easy to use graphic interface for a autonuoumos robot project at University of Győr. There is an alternative web based GUI option in the project also.
 
 This version is based on QuantumGIS geographic information system QT5 based software, the solution usis its Python capabilitties to implement the necessary features. <br>
@@ -67,7 +65,7 @@ The steps:
 4. Install necessary Python modules using pip
 5. Download to the desired destination folder
 6. Download the desired GeoTIFF files from 
-File can be downloadaed from here: <a href="(https://drive.google.com/drive/folders/1s2qsFp73ChGFuzdcNKcb3fOp995OTX0y)">Link</a>
+File can be downloadaed from here: <a href="https://drive.google.com/drive/folders/1s2qsFp73ChGFuzdcNKcb3fOp995OTX0y" target="_blank">Link</a>
 7. Start GUI in the destination folder
    ```
    python3 armap_gui.py
