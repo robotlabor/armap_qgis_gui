@@ -64,8 +64,8 @@ The steps:
    ```
 4. Install necessary Python modules using pip
 5. Download to the desired destination folder
-6. Download the desired GeoTIFF files from 
-File can be downloaded from here: [Link](https://drive.google.com/drive/folders/1s2qsFp73ChGFuzdcNKcb3fOp995OTX0y)
+6. Download the desired GeoTIFF files from here: [Link](https://drive.google.com/drive/folders/1s2qsFp73ChGFuzdcNKcb3fOp995OTX0y)
+The geotiff files should be locataed in the imagedata folder in the project folder. It has to be dowloaded from Google Drive because of the GitHUB size limitation.
 7. Start GUI in the destination folder
    ```
    python3 armap_gui.py
