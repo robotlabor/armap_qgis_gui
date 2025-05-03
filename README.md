@@ -79,6 +79,8 @@ File can be downloaded from here: [Link](https://drive.google.com/drive/folders/
 ## Start the GUI
 
 The following command will start the application:
-   ```python3 armap_gui.py```
+   ```
+   python3 armap_gui.py
+   ```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
