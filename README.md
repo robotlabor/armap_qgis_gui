@@ -66,7 +66,9 @@ The steps:
    ```
 4. Install necessary Python modules using pip
 5. Download to the desired destination folder
-6. Start GUI in the destination folder
+6. Download the desired GeoTIFF files from 
+File can be downloadaed from here: <a href="(https://drive.google.com/drive/folders/1s2qsFp73ChGFuzdcNKcb3fOp995OTX0y)">Link</a>
+7. Start GUI in the destination folder
    ```
    python3 armap_gui.py
    ```
