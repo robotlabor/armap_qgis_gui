@@ -78,6 +78,10 @@ class MainWindow(QMainWindow):
 			self.bms_V.setText(f'BMS U: {str(round(message.voltage,1))} V')
 			self.bms_I.setText(f'BMS I: {str(round(message.current,1))} mA')
 			self.bms_progressbar.setValue(int(round(message.percentage*100,1)))
+		#elif 'BatteryState' in str(type(message)) :
+			# ha a rakománnyal kapcsolatos üzenetet vesszük
+			self.load_info_total.setText(f'Összes bója: {str(5)}')
+			self.load_info_done.setText(f'Lerakva: {str(3)}')
 		elif 'NavSatFix' in str(type(message)) :
 			i = 1
 			#print(f"2GPS lon: {message.longitude}")
@@ -159,7 +163,7 @@ class MainWindow(QMainWindow):
 		self.setCentralWidget(main_widget)
 		
 		# Ablak paraméterek beállítása
-		self.setWindowTitle("ARMap")
+		self.setWindowTitle("ARMap GUI")
 		self.resize(1300, 500)
 
 	def initGauges(self):
@@ -234,6 +238,8 @@ class MainWindow(QMainWindow):
 		)
 
 		self.gauge_widget = QWidget()
+		self.gauge_widget.setMinimumWidth(250)
+		self.gauge_widget.setMaximumWidth(250)
 		gauge_layout = QVBoxLayout(self.gauge_widget)
 		gauge_front = QHBoxLayout()
 		gauge_rear = QHBoxLayout()
@@ -270,18 +276,35 @@ class MainWindow(QMainWindow):
 		# gauge_rear.addLayout(gauge4_labeled)
 
 		bms_layout = QVBoxLayout()
+		self.bms_label = QLabel()
+		self.bms_label.setText("Akku állapot:")
+		label1.setAlignment(Qt.AlignLeft)
+
 		self.bms_progressbar = QProgressBar(self)
 		self.bms_progressbar.setAlignment(Qt.AlignCenter)
 		
-		self.bms_progressbar.setFixedSize(200, 30)
+		#self.bms_progressbar.setFixedSize(300, 30)
 
 		self.bms_I = QLabel()
 		self.bms_I.setAlignment(Qt.AlignCenter)
 		self.bms_V = QLabel()
 		self.bms_V.setAlignment(Qt.AlignCenter)
+		gauge_layout.addWidget(self.bms_label)
 		gauge_layout.addWidget(self.bms_progressbar)
 		gauge_layout.addWidget(self.bms_I)
 		gauge_layout.addWidget(self.bms_V)
+
+		self.load_info_label = QLabel()
+		self.load_info_label.setText("Rakomány")
+		self.load_info_label.setAlignment(Qt.AlignLeft)
+		self.load_info_total = QLabel()
+		self.load_info_total.setAlignment(Qt.AlignCenter)
+		self.load_info_done = QLabel()
+		self.load_info_done.setAlignment(Qt.AlignCenter)
+		gauge_layout.addWidget(self.load_info_label)
+		gauge_layout.addWidget(self.load_info_total)
+		gauge_layout.addWidget(self.load_info_done)
+
 
 		self.emergency_button = QPushButton("STOP")
 		self.emergency_button.setStyleSheet("background-color: red")
