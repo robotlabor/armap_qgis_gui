@@ -3,7 +3,7 @@ from PyQt5.QtWidgets import QApplication, QMainWindow, QTextEdit, QWidget, QHBox
 from PyQt5.QtCore import Qt, pyqtSignal
 import rclpy
 from rclpy.node import Node
-from rclpy.qos import qos_profile_default, qos_profile_sensor_data
+from rclpy.qos import QoSProfile, qos_profile_sensor_data
 from std_msgs.msg import String
 from sensor_msgs.msg import NavSatFix, BatteryState
 

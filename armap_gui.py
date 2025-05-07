@@ -10,7 +10,7 @@ from qgis.utils import *
 import threading
 import rclpy
 from rclpy.node import Node
-from rclpy.qos import qos_profile_default, qos_profile_sensor_data
+from rclpy.qos import QoSProfile, qos_profile_sensor_data
 from std_msgs.msg import String
 from sensor_msgs.msg import NavSatFix, BatteryState
 from armap_ros2 import ROS2PubSub
